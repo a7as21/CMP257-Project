@@ -1,0 +1,42 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+button {
+    background-color: hsl(0, 0%, 60%);
+    border: 0;
+    border-radius: 15%;
+}
+
+@media (prefers-dark) {
+    
+}
+
+body {
+    animation:  toggle 2s 0s linear infinite alternate;
+}
+
+/*we should update this at a later date when our style is done*/
+.light-mode {
+    background-color: hsl(220, 95%, 70%);
+    color: black;
+    a{
+        color: hsl(230, 100%, 40%)
+    }
+}
+
+
+.dark-mode {
+    background-color: hsl(237,80%,20%);  
+    color: rgb(227,227,227); 
+    a{
+        color:hsl(190,75%,75%)
+    }
+}
+
+
+@keyframes toggle{
+    from {body: light-mode;}
+    to {body: dark-mode;}
+}
