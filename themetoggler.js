@@ -3,10 +3,9 @@ dmb.addEventListener('click', toggleDarkMode);
 
 
 function toggleDarkMode() {
-    let isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    let newTheme = isDark ? 'light' : 'dark';
+    let currentTheme = localStorage.getItem('theme') || 'light';
+    let newTheme = (currentTheme == 'dark') ? 'light' : 'dark';
     
-    document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     
     changeTheme(newTheme);
@@ -18,6 +17,5 @@ function changeTheme(theme) {
 
 document.addEventListener('DOMContentLoaded', () => {
     let savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
     changeTheme(savedTheme);
 });
