@@ -1,16 +1,14 @@
-const toggler = document.getElementById('darkmodetoggler');
-const body = document.body
+const dmb = document.getElementById('dmb');
+dmb.addEventListener('click', toggleDarkMode);
 
-body.classList.add('light-mode');
 
-function DarkModeToggle() {
-    if(body.classList.contains('light-mode')) {
-        body.classList.replace('light-mode','dark-mode');
-        toggler.textContent = 'Switch to Light Mode';
-    }
-
-    else{
-        body.classList.replace('dark-mode', 'light-mode');
-        toggler.textContent = 'Switch to Dark Mode';
-    }
+function toggleDarkMode() {
+    let isDark = document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', isDark ? 1 : 0);
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    if (localStorage.getItem('darkMode') == 1) {
+        document.body.classList.add('dark-mode');
+    }
+});
