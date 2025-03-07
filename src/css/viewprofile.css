@@ -1,0 +1,75 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: rgb(85, 85, 85);
+    color: white;
+    text-align: center;
+}
+
+.profile-card {
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profile-card h3 {
+    margin: auto;
+    align-items: flex-start;
+}
+
+.profile-layout .container {
+    max-width: 400px;
+    width: 90%;
+    margin: 10% auto;
+}
+
+.profile-layout .container h5 {
+    text-align: left;
+}
+
+.profile-layout .container div {
+    background-color: rgb(35, 35, 35);
+    margin: 6px 0;
+    padding: 15px;
+    
+    border: solid;
+    border-color: white;
+    border-radius: 10px;
+    border-width: thin;
+
+    min-width: 150px;
+    min-height: 100px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-layout .container div p {
+    margin: 0;
+    text-align: center;
+}
