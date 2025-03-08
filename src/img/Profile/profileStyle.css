@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #6c757d;
+    color: #fff;
+    position: relative;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-pic label {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.border {
+    border: 1px solid #dee2e6 !important;
+    border-radius: 8px;
+}
+
+.editable {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.editable:hover {
+    background-color: #e9ecef;
+}
+
+input.form-control {
+    width: 100% !important;
+    margin: 5px 0;
+}
+
+/* Ensure main content doesn't overlap with the navbar */
+main {
+    margin-top: 56px; /* Height of the fixed navbar */
+    height: calc(100vh - 56px);
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+/* Align navbar brand to the left */
+.navbar-brand {
+    margin-left: 0.5rem;
+}
