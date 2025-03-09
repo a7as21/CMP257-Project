@@ -19,6 +19,18 @@ body {
     text-align: center;
 }
 
+.contact button {
+    background: none;
+}
+
+.contact button {
+    min-width: 32px;
+    min-height: 32px;
+
+    width: 5%;
+    height: 5%;
+}
+
 .profile-card {
     width: fit-content;
     padding: 20px;
