@@ -1,0 +1,28 @@
+.navbar {
+    background: rgb(200,200,200);
+    position: relative;
+}
+
+.navbar a {
+    color:black;
+}
+
+#sidebar { 
+    background-color: rgb(190,190,190);
+}
+
+#sidebar h5 {
+    color:black;
+}
+
+#sidebar .offcanvas-body .offcanvas-header h3 {
+    color: black;
+}
+
+#sidebar .offcanvas-body .offcanvas-header .btn-close {
+    color: black;
+}
+
+#sidebar .offcanvas-body nav ul .nav-item a {
+    color: black;
+}

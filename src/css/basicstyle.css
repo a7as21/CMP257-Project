@@ -9,8 +9,8 @@ button {
     border-radius: 15%;
 }
 
-@media (prefers-dark) {
-    
+.content {
+    margin-top: 15px;
 }
 
 body {
