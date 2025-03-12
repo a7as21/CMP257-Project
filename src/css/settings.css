@@ -8,13 +8,14 @@
 body {
     display: flex;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
 }
 
 .sidebar {
     width: 250px;
-    background: #333;
-    color: white;
+    background: #333333;
+    color: rgb(240,240,240);
     padding: 20px;
 }
 
@@ -34,13 +35,12 @@ body {
 }
 
 .sidebar ul li:hover {
-    background: #444;
+    background: #444444;
 }
 
 .content {
     flex: 1;
     padding: 20px;
-    background: white;
 }
 
 .content h2 {
@@ -60,6 +60,7 @@ body {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
+    background-color: var(--secondary-background-color);
     border-radius: 5px;
 }
 
@@ -68,8 +69,27 @@ body {
     align-items: center;
 }
 
-.toggle input {
-    margin-right: 10px;
+.toggle label {
+    margin-top: 50px;
+    margin-right: 5%;
+    margin-bottom: 5%;
+
+    padding: 3% 8%;
+
+    border: 2px solid;
+    border-radius: 20px;
+
+    background-color: var(--misc-background-color);
+    cursor: pointer;
+}
+
+#lightLabelbutton {
+    background-color: rgb(230,230,230);
+}
+
+#darkLabelbutton {
+    background-color: rgb(20,20,20);
+    color:rgb(230,230,230);
 }
 
 .btn {

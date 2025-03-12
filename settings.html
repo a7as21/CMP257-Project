@@ -5,7 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Settings Page</title>
-        <link rel="stylesheet" href="../src/css/settings.css">
+        <link id="theme" rel="stylesheet" href="css/themes/Light.css">
+        <link rel="stylesheet" href="src/css/settings.css">
     </head>
     <body>
 
@@ -54,13 +55,20 @@
             <div id="appearance" class="section" style="display: none;">
                 <h2>Appearance</h2>
                 <div class="toggle">
-                    <input type="checkbox" id="darkMode">
-                    <label for="darkMode">Enable Dark Mode</label>
+                    <label class="theme-switcher">
+                    <input type="radio" name="theme" id="Dark">
+                        Dark
+                    </label>
+
+                    <label class="theme-switcher">
+                    <input type="radio" name="theme" id="Light">
+                        Light
+                    </label>
                 </div>
-                <button class="btn">Apply</button>
             </div>
         </div>
 
-        <script src="settings.js"></script>
+        <script src="src/themetoggler.js"></script>
+        <script src="src/settings.js"></script>
     </body>
 </html>
