@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function changeTheme(theme) {
         localStorage.setItem('theme', theme);
-        themeLink.href = `../CMP257Project/src/css/themes/${theme}.css`;
+        themeLink.href = `../src/css/themes/${theme}.css`;
     }
 
     const savedTheme = localStorage.getItem('theme') || 'light';
