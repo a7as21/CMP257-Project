@@ -1,0 +1,58 @@
+body {
+   background-color: rgb(15, 13, 13);
+}
+
+.searchbar-container{
+    text-align: center;
+}
+
+
+.navbar{
+    position: fixed;
+}
+
+.big-card-container{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.big-card{
+    background-color: grey;
+    font-size: x-large;
+    padding: 5px;
+}
+
+.big-card-container h5{
+    font-size: x-large;
+    color:aliceblue;
+}
+
+/* Center card contents */
+.card {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%; 
+    max-width: 18rem;
+    margin: auto;
+}
+
+.card img {
+    width: 100px; 
+    height: 100px;
+    object-fit: cover; 
+    border-radius: 50%; 
+    margin-bottom: 15px;
+}
+
+.card-body p {
+    margin-bottom: 15px;
+}
+
+.card-body .btn {
+    margin-top: auto;
+}
+
