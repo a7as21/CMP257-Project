@@ -48,6 +48,10 @@ body {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    border: 6px solid;
+    border-width: thin;
+    border-color: var(--primary-text-color);
+    border-radius: 100%;
 }
 
 .profile-card h3 {
@@ -69,7 +73,7 @@ body {
 .profile-layout .sect {
     text-align: left;
     margin: auto;
-    width: fit-content;
+    width: 650px;
 }
 
 .profile-layout .sect p {
@@ -85,8 +89,12 @@ body {
     display: block;
 }
 
+.sect-cont div p {
+    text-align: left;
+}
+
 .sect-cont { 
-    width: 500px;
+    width: 700px;
     text-align: left;
 }
 
@@ -101,5 +109,5 @@ body {
 }
 
 .maincontent  {
-    margin-top: 220px;
+    margin-top: 200px;
 }
