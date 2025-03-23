@@ -101,3 +101,19 @@ body {
     margin-top: auto;
 }
 
+
+.dropdown-menu{
+    align-items: center;
+    margin-left: 10px;
+}
+
+.dropdown-menu .btn {
+    text-align: center;
+}
+
+.dropdown{
+    left:20px;
+    top:60px;
+}
+
+
