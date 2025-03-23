@@ -13,7 +13,7 @@
         <div id="sidebar-container"></div>
             
         </div>
-        <div class="maincontent">
+        <div class="maincontent container-fluid p-4">
             <div class="profile-layout">
 
                 <div class="profile-card">
@@ -29,28 +29,68 @@
                     </button>
                 </div>
 
-                <div class="row">
-                    <div class="col-6">
-                        <div class="container">
-                            <h5>About me:</h5>
-                            <div class="about-me">
-                                <p>yap yap yap</p>
+                <div class="sect-cont">
+                    <h4 class="section-title mb-3">About Me</h4>
+                    <div class="sect mb-4 border p-4 rounded-5" id="about-me">
+                        <div class="row gx-5">
+                            <div class="col-md-6">
+                                <label class="fw-bold">ID:</label><span id="id">12345678</span><br>
+                                <label class="fw-bold">Age:</label><span id="age">21</span><br>
+                                <label class="fw-bold">Gender:</label><span id="gender">Male</span><br>
+                                <label class="fw-bold">Nationality:</label><span id="nationality">American</span>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="fw-bold">Major:</label><span id="major">Computer
+                                    Science</span><br>
+                                <label class="fw-bold">Year:</label><span id="year">Junior</span><br>
+                                <label class="fw-bold">Email:</label><span id="email">johndoe@example.com</span><br>
+                                <label class="fw-bold">Phone Number:</label><span id="phone">971569999999</span>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-6">
-                        <div class="container">
-                            <h5>Preferences:</h5>
-                            <div class="preferences">
-                                <p>more preferences</p>
+                <div class="sect-cont">
+                    <h4 class="section-title mb-3">Bio</h4>
+                    <div class="sect mb-4 border p-4 rounded-5" id="bio">
+                        <p id="bio">
+                            A passionate Computer Science major who loves exploring new technologies
+                            and solving real-world problems. Always open to new ideas and collaborations, and looking for a
+                            roommate who shares similar interests in tech and innovation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sect-cont">
+                    <h4 class="section-title mb-3">Preferences</h4>
+                    <div class="mb-4 border p-4 rounded-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="fw-bold">Sleep Schedule:</label><span id="sleep-schedule">Flexible</span><br>
+                                <label class="fw-bold">Lights Preference:</label><span id="lights-preference">Flexible</span><br>
+                                <label class="fw-bold">Cleanliness:</label><span id="cleanliness">Casual</span>
                             </div>
+                            <div class="col-md-6">
+                                <label class="fw-bold">Noise Level:</label><span id="noise-level">Quiet</span><br>
+                                <label class="fw-bold">Guests:</label><span id="guests">None</span><br>
+                                <label class="fw-bold">Other:</label><span id="other:">None</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sect-cont">
+                    <h4 class="section-title mb-3">Hobbies &amp; Interests</h4>
+                    <div class="mb-4 border p-4 rounded-5">
+                        <div id="hobbies">
+                            Coding, Exploring AI, Playing Guitar, Traveling, Photography, Reading
+                            Sci-Fi novels, and Participating in Hackathons.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    
+
         <script src="src/jsimport/navsidebarimport.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </body>

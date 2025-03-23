@@ -19,6 +19,8 @@ body {
     color: var(--primary-text-color);
 }
 
+
+
 .contact button {
     background: none;
 }
@@ -27,8 +29,8 @@ body {
     min-width: 32px;
     min-height: 32px;
 
-    width: 5%;
-    height: 5%;
+    width: 3%;
+    height: 3%;
 }
 
 .profile-card {
@@ -53,37 +55,39 @@ body {
     align-items: flex-start;
 }
 
-.profile-layout .container {
-    max-width: 400px;
-    width: 90%;
-    margin: 10% auto;
+.sect-cont {
+    width: max-content;
+    margin: auto;
 }
 
-.profile-layout .container h5 {
+.profile-layout .section-title {
+    margin-top: 25px;
+    padding-left: 35px;
+    width: fit-content;
+}
+
+.profile-layout .sect {
     text-align: left;
+    margin: auto;
+    width: fit-content;
 }
 
-.profile-layout .container div {
-    background-color: var(--secondary-background-color);
-    margin: 6px 0;
-    padding: 15px;
-    
-    border: solid;
-    border-color: var(--primary-text-color);
-    border-radius: 10px;
-    border-width: thin;
-
-    min-width: 150px;
-    min-height: 100px;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-layout .container div p {
+.profile-layout .sect p {
     margin: 0;
-    text-align: center;
+}
+
+.profile-layout .sect-cont label{
+    margin-right: 4px;
+}
+
+.profile-layout .sect .row div {
+    width: fit-content;
+    display: block;
+}
+
+.sect-cont { 
+    width: 500px;
+    text-align: left;
 }
 
 .contact {
@@ -94,4 +98,8 @@ body {
 
 .navbar {
     position: fixed;
+}
+
+.maincontent  {
+    margin-top: 220px;
 }
