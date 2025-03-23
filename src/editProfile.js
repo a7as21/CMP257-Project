@@ -9,7 +9,6 @@ document.getElementById('profilePhotoInput').addEventListener('change', function
     }
 });
 
-// Existing functions for editing text fields
 function toggleEdit() {
     document.querySelector('.edit').classList.add('d-none');
     document.querySelector('.save').classList.remove('d-none');
@@ -25,6 +24,16 @@ function toggleEdit() {
             input.classList.add("form-control", "d-inline-block", "w-100");
             field.innerHTML = "";
             field.appendChild(input);
+        } else if (field.tagName === 'P' || field.tagName === 'DIV') {
+            let text = field.innerText;
+            let textarea = document.createElement("textarea");
+            textarea.value = text;
+            textarea.classList.add("form-control");
+            textarea.rows = 3;
+            field.innerHTML = "";
+            field.appendChild(textarea);
+        } else if (field.tagName === 'SELECT') {
+            field.disabled = false;
         }
     });
 }
@@ -37,6 +46,13 @@ function saveChanges() {
             if (input) {
                 field.innerText = input.value;
             }
+        } else if (field.tagName === 'P' || field.tagName === 'DIV') {
+            let textarea = field.querySelector("textarea");
+            if (textarea) {
+                field.innerText = textarea.value;
+            }
+        } else if (field.tagName === 'SELECT') {
+            field.disabled = true;
         }
     });
 
@@ -48,3 +64,13 @@ function saveChanges() {
 function cancelEdit() {
     location.reload();
 }
+
+// Disable preferences dropdowns initially
+document.addEventListener('DOMContentLoaded', function () {
+    let dropdowns = document.querySelectorAll('.editable');
+    dropdowns.forEach(field => {
+        if (field.tagName === 'SELECT') {
+            field.disabled = true;
+        }
+    });
+});

@@ -1,124 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Profile Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="src/css/profileStyle.css">
     <script src="src/jsimport/headimport.js"></script>
 </head>
+
 <body>
     <div id="navbar-container"></div>
     <div id="sidebar-container"></div>
-
-    <!-- Main Content -->
+    <!-- main content -->
     <main class="container-fluid p-4">
-        <!-- Profile Photo Section -->
-        <div class="text-center mb-4">
-            <div class="profile-pic rounded-circle bg-secondary d-inline-block p-3 text-white position-relative">
-                <img id="profileImage" src="https://avatars.githubusercontent.com/u/199915234?v=4" alt="Profile Photo" class="rounded-circle" width="100" height="100">
-                <label for="profilePhotoInput" class="btn btn-sm btn-light position-absolute bottom-0 end-0 rounded-circle p-1">
-                    <i class="fas fa-camera"></i>
-                </label>
-                <input type="file" id="profilePhotoInput" accept="image/*" class="d-none">
+        <div class="container rounded-5 shadow-lg p-5">
+            <!-- profile photo section -->
+            <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+                <div class="profile-pic rounded-circle bg-black p-1 position-relative">
+                    <img id="profileImage" src="https://avatars.githubusercontent.com/u/199915234?v=4"
+                        alt="Profile Photo" class="rounded-circle" width="100" height="100">
+                    <label for="profilePhotoInput"
+                        class="btn btn-sm btn-light position-absolute bottom-0 end-0 rounded-circle p-1">
+                        <i class="bi bi-camera"></i>
+                    </label>
+                    <input type="file" id="profilePhotoInput" accept="image/*" class="d-none">
+                </div>
+                <h1>John Doe</h1>
             </div>
-        </div>
 
-        <!-- About Me Section -->
-        <div class="mb-4 border p-3 rounded">
-            <h4 class="mb-3">About Me</h4>
-            <div class="row">
-                <div class="col-md-6">
-                    <label class="fw-bold">Name:</label> <span class="editable" id="name">John Doe</span><br>
-                    <label class="fw-bold">ID:</label> <span class="editable" id="id">12345678</span><br>
-                    <label class="fw-bold">Age:</label> <span class="editable" id="age">21</span><br>
-                    <label class="fw-bold">Gender:</label> <span class="editable" id="gender">Male</span><br>
-                </div>
-                <div class="col-md-6">
-                    <label class="fw-bold">Major:</label> <span class="editable" id="major">Computer Science</span><br>
-                    <label class="fw-bold">Contact Info:</label> <span class="editable" id="contact">johndoe@example.com</span><br>
-                    <label class="fw-bold">Location:</label> <span class="editable" id="location">New York</span><br>
-                    <label class="fw-bold">Year:</label> <span class="editable" id="year">Junior</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bio Section -->
-        <div class="mb-4 border p-3 rounded">
-            <h4 class="mb-3">Bio</h4>
-            <div class="editable" id="bio">Looking for a roommate.</div>
-        </div>
-
-        <!-- Preferences Section -->
-        <div class="mb-4 border p-3 rounded">
-            <h4 class="mb-3">Preferences</h4>
-            <div class="row">
-                <div class="col-md-6">
-                    <label class="fw-bold">Sleep Schedule:</label>
-                    <select class="form-select editable" id="sleep">
-                        <option value="">Select</option>
-                        <option value="Early Bird">Early Bird</option>
-                        <option value="Night Owl">Night Owl</option>
-                        <option value="Flexible">Flexible</option>
-                    </select><br>
-                    <label class="fw-bold">Lights Preference:</label>
-                    <select class="form-select editable" id="lights">
-                        <option value="">Select</option>
-                        <option value="Lights On">Lights On</option>
-                        <option value="Lights Off">Lights Off</option>
-                        <option value="Flexible">Flexible</option>
-                    </select><br>
-                    <label class="fw-bold">Cleanliness:</label>
-                    <select class="form-select editable" id="cleanliness">
-                        <option value="">Select</option>
-                        <option value="Neat and Organized">Neat and Organized</option>
-                        <option value="Casual">Casual</option>
-                        <option value="Messy">Messy</option>
-                    </select><br>
-                </div>
-                <div class="col-md-6">
-                    <label class="fw-bold">Noise Level:</label>
-                    <select class="form-select editable" id="noise">
-                        <option value="">Select</option>
-                        <option value="Quiet">Quiet</option>
-                        <option value="Moderate">Moderate</option>
-                        <option value="Loud">Loud</option>
-                    </select><br>
-                    <label class="fw-bold">Guests:</label>
-                    <select class="form-select editable" id="guests">
-                        <option value="">Select</option>
-                        <option value="None">None</option>
-                        <option value="Occasional">Occasional</option>
-                        <option value="Frequent">Frequent</option>
-                    </select><br>
-                    <label class="fw-bold">Other:</label>
-                    <select class="form-select editable" id="other">
-                        <option value="">Select</option>
-                        <option value="Prefers quiet environments">Prefers quiet environments</option>
-                        <option value="Likes social environments">Likes social environments</option>
-                        <option value="No specific preferences">No specific preferences</option>
-                    </select>
+            <!-- about me section -->
+            <div class="mb-4 border p-4 rounded-5">
+                <h4 class="mb-3">About Me</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="fw-bold">ID:</label> <span class="editable" id="id">12345678</span><br>
+                        <label class="fw-bold">Age:</label> <span class="editable" id="age">21</span><br>
+                        <label class="fw-bold">Gender:</label> <span class="editable" id="gender">Male</span><br>
+                        <label class="fw-bold">Nationality:</label> <span class="editable"
+                            id="nationality">American</span><br>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="fw-bold">Major:</label> <span class="editable" id="major">Computer
+                            Science</span><br>
+                        <label class="fw-bold">Year:</label> <span class="editable" id="year">Junior</span><br>
+                        <label class="fw-bold">Email:</label> <span class="editable"
+                            id="email">johndoe@example.com</span><br>
+                        <label class="fw-bold">Phone Number:</label> <span class="editable"
+                            id="phone">971569999999</span><br>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Hobbies Section -->
-        <div class="mb-4 border p-3 rounded">
-            <h4 class="mb-3">Hobbies & Interests</h4>
-            <div class="editable" id="hobbies">Reading, Coding, Hiking, Music</div>
-        </div>
+            <!-- bio section -->
+            <div class="mb-4 border p-4 rounded-5">
+                <h4 class="mb-3">Bio</h4>
+                <p class="editable" id="bio">A passionate Computer Science major who loves exploring new technologies
+                    and solving real-world problems. Always open to new ideas and collaborations, and looking for a
+                    roommate who shares similar interests in tech and innovation.</p>
+            </div>
 
-        <!-- Buttons -->
-        <div class="text-center">
-            <button class="btn btn-primary edit" onclick="toggleEdit()">Edit</button>
-            <button class="btn btn-success save d-none" onclick="saveChanges()">Save</button>
-            <button class="btn btn-danger cancel d-none" onclick="cancelEdit()">Cancel</button>
+            <!-- preferences section -->
+            <div class="mb-4 border p-4 rounded-5">
+                <h4 class="mb-3">Preferences</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="fw-bold">Sleep Schedule:</label>
+                        <select class="form-select editable" id="sleep">
+                            <option value="">Select</option>
+                            <option value="Early Bird">Early Bird</option>
+                            <option value="Night Owl">Night Owl</option>
+                            <option value="Flexible">Flexible</option>
+                        </select><br>
+                        <label class="fw-bold">Lights Preference:</label>
+                        <select class="form-select editable" id="lights">
+                            <option value="">Select</option>
+                            <option value="Lights On">Lights On</option>
+                            <option value="Lights Off">Lights Off</option>
+                            <option value="Flexible">Flexible</option>
+                        </select><br>
+                        <label class="fw-bold">Cleanliness:</label>
+                        <select class="form-select editable" id="cleanliness">
+                            <option value="">Select</option>
+                            <option value="Neat and Organized">Neat and Organized</option>
+                            <option value="Casual">Casual</option>
+                            <option value="Messy">Messy</option>
+                        </select><br>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="fw-bold">Noise Level:</label>
+                        <select class="form-select editable" id="noise">
+                            <option value="">Select</option>
+                            <option value="Quiet">Quiet</option>
+                            <option value="Moderate">Moderate</option>
+                            <option value="Loud">Loud</option>
+                        </select><br>
+                        <label class="fw-bold">Guests:</label>
+                        <select class="form-select editable" id="guests">
+                            <option value="">Select</option>
+                            <option value="None">None</option>
+                            <option value="Occasional">Occasional</option>
+                            <option value="Frequent">Frequent</option>
+                        </select><br>
+                        <label class="fw-bold">Other:</label>
+                        <select class="form-select editable" id="other">
+                            <option value="">Select</option>
+                            <option value="Prefers quiet environments">Prefers quiet environments</option>
+                            <option value="Likes social environments">Likes social environments</option>
+                            <option value="No specific preferences">No specific preferences</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- hobbies section -->
+            <div class="mb-4 border p-4 rounded-5">
+                <h4 class="mb-3">Hobbies & Interests</h4>
+                <div class="editable" id="hobbies">Coding, Exploring AI, Playing Guitar, Traveling, Photography, Reading
+                    Sci-Fi novels, and Participating in Hackathons.</div>
+            </div>
+
+            <!-- buttons -->
+            <div class="text-center">
+                <button class="btn btn-primary edit" onclick="toggleEdit()">Edit</button>
+                <button class="btn btn-success save d-none" onclick="saveChanges()">Save</button>
+                <button class="btn btn-danger cancel d-none" onclick="cancelEdit()">Cancel</button>
+            </div>
         </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="src/editProfile.js"></script>
     <script src="src/themetoggler.js"></script>
     <script src="src/jsimport/navsidebarimport.js"></script>
 </body>
+
 </html>
