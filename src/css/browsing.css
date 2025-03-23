@@ -1,0 +1,119 @@
+body {
+   background-color: var(--primary-background-color);
+}
+
+.searchbar-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .text-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--misc-background-color);
+    border: 4px solid var(--misc-background-color);
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .text-container input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 20px;
+    background-color: var(--misc-background-color);
+    color: var(--primary-text-color);
+  }
+  
+.text-container button {
+    display: flex;
+    align-items: center;
+    background: #007bff;
+    color: #fff;
+    border:none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+  
+.text-container button:hover {
+    background: #0056b3;
+}
+  
+.navbar{
+    position: fixed;
+}
+
+.big-card-container{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.big-card{
+    background-color: var(--misc-background-color);
+    font-size: x-large;
+    padding: 5px;
+    color: var(--primary-text-color);
+}
+
+.big-card-container h5{
+    font-size: x-large;
+    color: var(--primary-text-color);
+}
+
+/* Center card contents */
+.card {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%; 
+    max-width: 18rem;
+    margin: auto;
+    background-color: var(--secondary-background-color);
+    color: var(--primary-text-color);
+}
+
+.card img {
+    width: 100px; 
+    height: 100px;
+    object-fit: cover; 
+    border-radius: 50%; 
+    margin-bottom: 15px;
+}
+
+.card-body p {
+    margin-bottom: 15px;
+}
+
+.card-body .btn {
+    margin-top: auto;
+}
+
+
+.dropdown-menu{
+    align-items: center;
+    margin-left: 10px;
+}
+
+.dropdown-menu .btn {
+    text-align: center;
+}
+
+.dropdown{
+    left:20px;
+    top:60px;
+}
+
+

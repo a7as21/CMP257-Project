@@ -1,0 +1,113 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    text-align: center;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+}
+
+
+
+.contact button {
+    background: none;
+}
+
+.contact button {
+    min-width: 32px;
+    min-height: 32px;
+
+    width: 3%;
+    height: 3%;
+}
+
+.profile-card {
+    width: fit-content;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+}
+
+.profile-card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 6px solid;
+    border-width: thin;
+    border-color: var(--primary-text-color);
+    border-radius: 100%;
+}
+
+.profile-card h3 {
+    margin: auto;
+    align-items: flex-start;
+}
+
+.sect-cont {
+    width: max-content;
+    margin: auto;
+}
+
+.profile-layout .section-title {
+    margin-top: 25px;
+    padding-left: 35px;
+    width: fit-content;
+}
+
+.profile-layout .sect {
+    text-align: left;
+    margin: auto;
+    width: 650px;
+}
+
+.profile-layout .sect p {
+    margin: 0;
+}
+
+.profile-layout .sect-cont label{
+    margin-right: 4px;
+}
+
+.profile-layout .sect .row div {
+    width: fit-content;
+    display: block;
+}
+
+.sect-cont div p {
+    text-align: left;
+}
+
+.sect-cont { 
+    width: 700px;
+    text-align: left;
+}
+
+.contact {
+    filter: invert(1);
+    mix-blend-mode: difference;
+    margin: 10px 0px;
+}
+
+.navbar {
+    position: fixed;
+}
+
+.maincontent  {
+    margin-top: 200px;
+}

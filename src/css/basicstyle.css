@@ -1,0 +1,21 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+button {
+    background-color: hsl(0, 0%, 60%);
+    border: 0;
+    border-radius: 15%;
+}
+
+.content {
+    margin-top: 15px;
+}
+
+body {
+    animation:  toggle 2s 0s linear infinite alternate;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+}
+
