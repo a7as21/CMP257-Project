@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="600" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="1000" height="600" fill="#2196F3"/>
+    
+    <!-- Abstract Pattern -->
+    <circle cx="100" cy="100" r="150" fill="rgba(255,255,255,0.1)"/>
+    <circle cx="400" cy="200" r="100" fill="rgba(255,255,255,0.1)"/>
+    <circle cx="700" cy="100" r="120" fill="rgba(255,255,255,0.1)"/>
+    <circle cx="900" cy="300" r="80" fill="rgba(255,255,255,0.1)"/>
+    <circle cx="200" cy="400" r="90" fill="rgba(255,255,255,0.1)"/>
+    <circle cx="500" cy="500" r="130" fill="rgba(255,255,255,0.1)"/>
+    <circle cx="800" cy="500" r="110" fill="rgba(255,255,255,0.1)"/>
+</svg> 

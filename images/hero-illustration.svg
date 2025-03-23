@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Building -->
+    <rect x="150" y="100" width="200" height="250" fill="#4CAF50" rx="10"/>
+    
+    <!-- Windows -->
+    <rect x="170" y="120" width="60" height="60" fill="#fff" rx="5"/>
+    <rect x="270" y="120" width="60" height="60" fill="#fff" rx="5"/>
+    <rect x="170" y="200" width="60" height="60" fill="#fff" rx="5"/>
+    <rect x="270" y="200" width="60" height="60" fill="#fff" rx="5"/>
+    <rect x="170" y="280" width="60" height="60" fill="#fff" rx="5"/>
+    <rect x="270" y="280" width="60" height="60" fill="#fff" rx="5"/>
+    
+    <!-- People Icons -->
+    <circle cx="200" cy="150" r="15" fill="#2196F3"/>
+    <circle cx="300" cy="150" r="15" fill="#2196F3"/>
+    <path d="M185 140 h30 M285 140 h30" stroke="#2196F3" stroke-width="4"/>
+    
+    <!-- Connection Lines -->
+    <path d="M220 150 C250 150,250 150,280 150" stroke="#2196F3" stroke-width="2" fill="none"/>
+    
+    <!-- Stars -->
+    <path d="M380 80l-5 10-10 5 10 5 5 10 5-10 10-5-10-5z" fill="#FFD700"/>
+    <path d="M420 120l-4 8-8 4 8 4 4 8 4-8 8-4-8-4z" fill="#FFD700"/>
+    <path d="M100 150l-3 6-6 3 6 3 3 6 3-6 6-3-6-3z" fill="#FFD700"/>
+</svg> 

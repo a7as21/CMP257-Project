@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Rectangle -->
+    <rect width="200" height="60" fill="none"/>
+    
+    <!-- House Icon -->
+    <path d="M30 40l-15-15 15-15 15 15-15 15z" fill="#4CAF50"/>
+    <path d="M25 40v-10h10v10h-10z" fill="#2196F3"/>
+    
+    <!-- Text -->
+    <text x="60" y="35" font-family="Poppins, sans-serif" font-size="24" font-weight="600">
+        <tspan fill="#4CAF50">AUS</tspan>
+        <tspan fill="#2196F3" x="115" y="35">RF</tspan>
+    </text>
+</svg> 

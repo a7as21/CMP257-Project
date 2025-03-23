@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Roommates - AUS Roommate Finder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+        .search-container {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-input {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .search-input input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-input input:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+        }
+
+        .search-input i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+
+        .filter-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-section h5 {
+            margin-bottom: 1rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .filter-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .filter-chip {
+            background: #f8f9fa;
+            border: 2px solid #eee;
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-chip:hover,
+        .filter-chip.active {
+            background: #4CAF50;
+            border-color: #4CAF50;
+            color: white;
+        }
+
+        .results-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-header {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+            color: white;
+        }
+
+        .profile-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-bottom: 1rem;
+        }
+
+        .profile-info {
+            padding: 1.5rem;
+        }
+
+        .info-item {
+            margin-bottom: 1rem;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-label {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 0.25rem;
+        }
+
+        .card-actions {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-action {
+            flex: 1;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        .btn-action:hover {
+            transform: translateY(-2px);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            background: white;
+            border-radius: 15px;
+            grid-column: 1 / -1;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            grid-column: 1 / -1;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 1rem;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #4CAF50;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <button class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/logo.svg" alt="AUS Roommate Finder">
+            <h4>Roommate Finder</h4>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="home.html">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="browse.html" class="active">
+                    <i class="fas fa-search"></i>
+                    Browse Roommates
+                </a>
+            </li>
+            <li>
+                <a href="chat.html">
+                    <i class="fas fa-comments"></i>
+                    Messages
+                </a>
+            </li>
+            <li>
+                <a href="view-profile.html">
+                    <i class="fas fa-user"></i>
+                    My Profile
+                </a>
+            </li>
+            <li>
+                <a href="#" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <div class="search-container fade-in">
+            <div class="search-input">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search by name, major, or interests...">
+            </div>
+
+            <form id="filterForm">
+                <div class="filter-section">
+                    <h5>Sleep Schedule</h5>
+                    <div class="filter-chips" data-filter="sleepSchedule">
+                        <div class="filter-chip" data-value="Early Bird">Early Bird</div>
+                        <div class="filter-chip" data-value="Night Owl">Night Owl</div>
+                        <div class="filter-chip" data-value="Regular">Regular</div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h5>Cleanliness</h5>
+                    <div class="filter-chips" data-filter="cleanliness">
+                        <div class="filter-chip" data-value="Very Clean">Very Clean</div>
+                        <div class="filter-chip" data-value="Moderately Clean">Moderately Clean</div>
+                        <div class="filter-chip" data-value="Relaxed">Relaxed</div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h5>Noise Tolerance</h5>
+                    <div class="filter-chips" data-filter="noiseTolerance">
+                        <div class="filter-chip" data-value="High">High</div>
+                        <div class="filter-chip" data-value="Medium">Medium</div>
+                        <div class="filter-chip" data-value="Low">Low</div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h5>Smoking</h5>
+                    <div class="filter-chips" data-filter="smoking">
+                        <div class="filter-chip" data-value="Yes">Yes</div>
+                        <div class="filter-chip" data-value="No">No</div>
+                        <div class="filter-chip" data-value="Outside Only">Outside Only</div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h5>Pets</h5>
+                    <div class="filter-chips" data-filter="pets">
+                        <div class="filter-chip" data-value="Yes">Yes</div>
+                        <div class="filter-chip" data-value="No">No</div>
+                        <div class="filter-chip" data-value="Case by Case">Case by Case</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div id="resultsContainer" class="results-container">
+            <!-- Results will be populated by JavaScript -->
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Check authentication
+        if (!auth.isLoggedIn()) {
+            window.location.href = 'login.html';
+        }
+
+        // Initialize filters
+        const filterChips = document.querySelectorAll('.filter-chip');
+        filterChips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chip.classList.toggle('active');
+                updateResults();
+            });
+        });
+
+        // Handle search input
+        const searchInput = document.getElementById('searchInput');
+        let searchTimeout;
+        searchInput.addEventListener('input', () => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(updateResults, 300);
+        });
+
+        function getActiveFilters() {
+            const filters = {};
+            document.querySelectorAll('.filter-chips').forEach(section => {
+                const filterName = section.dataset.filter;
+                const activeChips = section.querySelectorAll('.filter-chip.active');
+                if (activeChips.length > 0) {
+                    filters[filterName] = Array.from(activeChips).map(chip => chip.dataset.value);
+                }
+            });
+            return filters;
+        }
+
+        function updateResults() {
+            const searchQuery = searchInput.value.toLowerCase();
+            const filters = getActiveFilters();
+            const resultsContainer = document.getElementById('resultsContainer');
+
+            // Show loading state
+            resultsContainer.innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Finding your perfect roommate match...</p>
+                </div>
+            `;
+
+            // Simulate API call delay
+            setTimeout(() => {
+                const results = roommates.search(filters);
+                
+                // Filter by search query
+                const filteredResults = results.filter(user => 
+                    user.name.toLowerCase().includes(searchQuery) ||
+                    user.major.toLowerCase().includes(searchQuery) ||
+                    user.hobbies.some(hobby => hobby.toLowerCase().includes(searchQuery))
+                );
+
+                if (filteredResults.length === 0) {
+                    resultsContainer.innerHTML = `
+                        <div class="no-results">
+                            <i class="fas fa-search fa-3x mb-3" style="color: #ccc;"></i>
+                            <h3>No matches found</h3>
+                            <p>Try adjusting your filters or search criteria</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                resultsContainer.innerHTML = filteredResults.map(user => `
+                    <div class="profile-card fade-in">
+                        <div class="profile-header">
+                            <img src="${user.avatar || 'images/default-avatar.svg'}" alt="${user.name}" class="profile-avatar">
+                            <h3>${user.name}</h3>
+                            <p>${user.major} - Year ${user.year}</p>
+                        </div>
+                        <div class="profile-info">
+                            <div class="info-item">
+                                <div class="info-label">Sleep Schedule</div>
+                                <div>${user.sleepSchedule}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Cleanliness</div>
+                                <div>${user.cleanliness}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Noise Tolerance</div>
+                                <div>${user.noiseTolerance}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Hobbies</div>
+                                <div>${user.hobbies.join(', ')}</div>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <a href="chat.html?id=${user.id}" class="btn-action btn-primary">Message</a>
+                            <a href="view-profile.html?id=${user.id}" class="btn-action btn-secondary">View Profile</a>
+                        </div>
+                    </div>
+                `).join('');
+            }, 1000);
+        }
+
+        // Initial load
+        updateResults();
+    </script>
+</body>
+</html> 
