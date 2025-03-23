@@ -16,6 +16,13 @@
     color: var(--primary-text-color);
 }
 
+#theme-toggler {
+    filter: invert(1);
+    mix-blend-mode: difference;
+    border: 0;
+    background: none;
+}
+
 
 #sidebar { 
     background-color: var(--secondary-background-color);

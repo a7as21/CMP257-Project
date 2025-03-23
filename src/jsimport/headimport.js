@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("src/reusable files/head.html")
+    fetch("src/head.html")
         .then(response => response.text())
         .then(data => {
             let tempDiv = document.createElement("div");
